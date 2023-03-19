@@ -1,0 +1,10 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Development server",
+      "request": "lanch",
+      "type": "node-terminal"
+    }
+  ]
+}
