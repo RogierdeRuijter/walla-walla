@@ -18,6 +18,8 @@ const blog = defineCollection({
       .string()
       .optional()
       .transform((str) => (str ? `/walla-walla${str}` : undefined)),
+    width: z.number(),
+    height: z.number(),
   }),
 });
 
