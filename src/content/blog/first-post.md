@@ -1,5 +1,5 @@
 ---
-title: "First post"
+title: "Best pizza in town?!?"
 description: "Lorem ipsum dolor sit amet"
 pubDate: "Jul 08 2022"
 heroImage: "corsa.jpg"
