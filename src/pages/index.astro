@@ -46,7 +46,7 @@ const posts = (await getCollection("blog"))
         display: block;
       }
 
-      picture {
+      a :global(picture) {
         grid-row: 1 / span 3;
         grid-column: 1;
       }
