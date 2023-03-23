@@ -72,7 +72,7 @@ const posts = (await getCollection('blog')).filter(blog => !blog.data.draft).sor
 						posts.map((post) => (
 							<li>
 								<a href={`${post.slug}/`}>
-									<Picture src={post.data.heroImage} widths={[400, 800, 1200]} formats={["avif"]} aspectRatio={post.data.width/post.data.height} 
+									<Picture src={post.data.heroImage} widths={[400, 800, 1200]} formats={["avif"]} aspectRatio={post.data.width/post.data.height} alt={post.data.title} 
 									sizes="30vw" />
 									<span>{post.data.title}</span>
 								</a>
