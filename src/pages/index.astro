@@ -69,7 +69,7 @@ const posts = (await getCollection('blog')).sort(
 							<li>
 								<a href={`${post.slug}/`}>
 									<!-- <FormattedDate date={post.data.pubDate} /> -->
-									<Picture src={post.data.heroImage} widths={[400, 800, 1200]} 	   formats={["avif", "jpeg"]} aspectRatio="9:16" sizes="30vw"></Image>
+									<Picture src={post.data.heroImage} widths={[400, 800, 1200]} 	   formats={["avif", "jpeg"]} aspectRatio="4032:3024" sizes="30vw"></Image>
 									<span>{post.data.title}</span>
 								</a>
 							</li>
