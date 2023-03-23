@@ -3,8 +3,8 @@ title: "Markdown Style Guide"
 description: "Here is a sample of some basic Markdown syntax that can be used when writing Markdown content in Astro."
 pubDate: "Jul 01 2022"
 heroImage: "/placeholder-hero.jpg"
-width: 360
-height: 720
+width: 720
+height: 360
 ---
 
 Here is a sample of some basic Markdown syntax that can be used when writing Markdown content in Astro.
