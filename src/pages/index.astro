@@ -1,87 +1,93 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
-import { getCollection } from 'astro:content';
-import FormattedDate from '../components/FormattedDate.astro';
-import { Picture } from '@astrojs/image/components';
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+import { getCollection } from "astro:content";
+import FormattedDate from "../components/FormattedDate.astro";
+import { Picture } from "@astrojs/image/components";
 
-const posts = (await getCollection('blog')).filter(blog => !blog.data.draft).sort(
-	(a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
-);
+const posts = (await getCollection("blog"))
+  .filter((blog) => !blog.data.draft)
+  .sort((a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf());
 ---
 
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-		<style>
-			ul {
-				list-style-type: none;
-				padding: unset;
-				display: grid;
-				grid-template-columns: repeat(auto-fit, min(100%, 300px));
-				gap: 1em;
-			}
-			ul li a {
-				display: grid;
-				grid-template-rows: 1fr repeat(2, 0.1fr);
-				grid-template-columns: 1fr;
-				text-decoration: none;
-			}
-			ul li :global(time) {
-				flex: 0 0 130px;
-				font-style: italic;
-				color: #595959;
-			}
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    <style>
+      ul {
+        list-style-type: none;
+        padding: unset;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, min(100%, 300px));
+        gap: 1em;
+      }
+      ul li a {
+        display: grid;
+        grid-template-rows: 1fr repeat(2, 0.1fr);
+        grid-template-columns: 1fr;
+        text-decoration: none;
+      }
+      ul li :global(time) {
+        flex: 0 0 130px;
+        font-style: italic;
+        color: #595959;
+      }
 
-			ul li span {
-				font-size: 2em;
-				background-color: rgba(211,211,211, 0.7);
-				color: black;
-				padding: 1rem;
-				grid-row: 2 / span 2;
-				grid-column: 1;
-				display: block;
-			}
-			
-			picture {
-				grid-row: 1 / span 3;
-				grid-column: 1;
-			}
+      ul li span {
+        font-size: 2em;
+        background-color: rgba(211, 211, 211, 0.7);
+        color: black;
+        padding: 1rem;
+        grid-row: 2 / span 2;
+        grid-column: 1;
+        display: block;
+      }
 
-			ul li a img {
-				border-radius: 8px;
-				object-fit: cover;
-				aspect-ratio: 9/16;
-				width: 100%;
-			}
+      picture {
+        grid-row: 1 / span 3;
+        grid-column: 1;
+      }
 
-			ul li a:visited {
-				color: #8e32dc;
-			}
-		</style>
-	</head>
-	<body>
-		<Header />
-		<main>
-			<section>
-				<ul>
-					{
-						posts.map((post) => (
-							<li>
-								<a href={`${post.slug}/`}>
-									<Picture src={post.data.heroImage} widths={[400, 800, 1200]} formats={["avif"]} aspectRatio={post.data.width/post.data.height} alt={post.data.title} 
-									sizes="30vw" />
-									<span>{post.data.title}</span>
-								</a>
-							</li>
-						))
-					}
-				</ul>
-			</section>
-		</main>
-		<Footer />
-	</body>
+      ul li a img {
+        border-radius: 8px;
+        object-fit: cover;
+        aspect-ratio: 9/16;
+        width: 100%;
+      }
+
+      ul li a:visited {
+        color: #8e32dc;
+      }
+    </style>
+  </head>
+  <body>
+    <Header />
+    <main>
+      <section>
+        <ul>
+          {
+            posts.map((post) => (
+              <li>
+                <a href={`${post.slug}/`}>
+                  <Picture
+                    src={post.data.heroImage}
+                    widths={[400, 800, 1200]}
+                    formats={["avif"]}
+                    aspectRatio={post.data.width / post.data.height}
+                    alt={post.data.title}
+                    sizes="30vw"
+                  />
+                  <span>{post.data.title}</span>
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </section>
+    </main>
+    <Footer />
+  </body>
 </html>
