@@ -46,7 +46,7 @@ const posts = (await getCollection('blog')).filter(blog => !blog.data.draft).sor
 				display: block;
 			}
 			
-			 .picture {
+			picture {
 				grid-row: 1 / span 3;
 				grid-column: 1;
 			}
@@ -72,9 +72,8 @@ const posts = (await getCollection('blog')).filter(blog => !blog.data.draft).sor
 						posts.map((post) => (
 							<li>
 								<a href={`${post.slug}/`}>
-									<!-- <FormattedDate date={post.data.pubDate} /> -->
 									<Picture src={post.data.heroImage} widths={[400, 800, 1200]} formats={["avif"]} aspectRatio={post.data.width/post.data.height} 
-									sizes="30vw"></Image>
+									sizes="30vw" />
 									<span>{post.data.title}</span>
 								</a>
 							</li>
