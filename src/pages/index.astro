@@ -74,7 +74,7 @@ const posts = (await getCollection("blog"))
                 <a href={`${post.slug}/`}>
                   <Picture
                     src={post.data.heroImage}
-                    widths={[400, 800, 1200]}
+                    widths={[400, 600, 800, 1000, 1200]}
                     formats={["avif"]}
                     aspectRatio={post.data.width / post.data.height}
                     alt={post.data.title}
