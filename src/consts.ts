@@ -3,3 +3,4 @@
 
 export const SITE_TITLE = 'My stories';
 export const SITE_DESCRIPTION = 'These are my stories';
+export const BASE = process.env.NODE_ENV !== 'development' ? 'walla-walla' : '';

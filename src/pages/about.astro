@@ -1,5 +1,7 @@
 ---
 import Layout from "../layouts/BlogPost.astro";
+import { base } from "../consts";
+import { SITE_TITLE } from "../consts";
 ---
 
 <Layout
@@ -7,7 +9,7 @@ import Layout from "../layouts/BlogPost.astro";
   description="Lorem ipsum dolor sit amet"
   pubDate={new Date("August 08 2021")}
   updatedDate={new Date("August 08 2022")}
-  heroImage="walla-walla/placeholder-about.jpg"
+  heroImage=`${base}/placeholder-about.jpg`
   width="720"
   height="360"
 >

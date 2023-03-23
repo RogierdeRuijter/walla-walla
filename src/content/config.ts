@@ -1,4 +1,5 @@
-import { defineCollection, z } from "astro:content";
+import { defineCollection, z } from 'astro:content';
+import { BASE } from '../consts';
 
 const blog = defineCollection({
   // Type-check frontmatter using a schema
@@ -18,7 +19,9 @@ const blog = defineCollection({
     heroImage: z
       .string()
       .optional()
-      .transform((str) => (str ? `/walla-walla${str}` : undefined)),
+      .transform((str) =>
+        str ? `/${BASE}${BASE ? '/' : ''}${str}` : undefined
+      ),
     width: z.number(),
     height: z.number(),
   }),

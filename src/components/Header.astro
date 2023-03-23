@@ -1,6 +1,6 @@
 ---
 import HeaderLink from "./HeaderLink.astro";
-import { SITE_TITLE } from "../consts";
+import { SITE_TITLE, BASE } from "../consts";
 ---
 
 <header>
@@ -8,8 +8,8 @@ import { SITE_TITLE } from "../consts";
     {SITE_TITLE}
   </h2>
   <nav>
-    <HeaderLink href="/walla-walla/">Blog</HeaderLink>
-    <HeaderLink href="/walla-walla/about">About</HeaderLink>
+    <HeaderLink href={`/${BASE}`}>Blog</HeaderLink>
+    <HeaderLink href={`/${BASE}${BASE ? '/' : ''}about`}>About</HeaderLink>
   </nav>
 </header>
 <style>
