@@ -5,7 +5,7 @@ import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 import { getCollection } from 'astro:content';
 import FormattedDate from '../components/FormattedDate.astro';
-import { Image } from '@astrojs/image/components';
+import { Picture } from '@astrojs/image/components';
 
 const posts = (await getCollection('blog')).sort(
 	(a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
@@ -69,7 +69,7 @@ const posts = (await getCollection('blog')).sort(
 							<li>
 								<a href={`${post.slug}/`}>
 									<!-- <FormattedDate date={post.data.pubDate} /> -->
-									<Image src={post.data.heroImage} width="315" format="avif" aspectRatio="9/16"></Image>
+									<Picture src={post.data.heroImage} widths={[400, 800, 1200]} 	   formats={["avif", "jpeg"]} aspectRatio="9:16" sizes="30vw"></Image>
 									<span>{post.data.title}</span>
 								</a>
 							</li>
