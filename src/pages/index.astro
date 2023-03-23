@@ -78,7 +78,7 @@ const posts = (await getCollection("blog"))
                     formats={["avif"]}
                     aspectRatio={post.data.width / post.data.height}
                     alt={post.data.title}
-                    sizes="30vw"
+                    sizes="(max-width: 600px) 100vw, 30vw"
                   />
                   <span>{post.data.title}</span>
                 </a>
