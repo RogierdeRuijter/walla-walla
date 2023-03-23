@@ -5,6 +5,7 @@ pubDate: "Jul 01 2022"
 heroImage: "/placeholder-hero.jpg"
 width: 720
 height: 360
+draft: true
 ---
 
 Here is a sample of some basic Markdown syntax that can be used when writing Markdown content in Astro.

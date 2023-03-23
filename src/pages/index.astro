@@ -7,7 +7,7 @@ import { getCollection } from 'astro:content';
 import FormattedDate from '../components/FormattedDate.astro';
 import { Picture } from '@astrojs/image/components';
 
-const posts = (await getCollection('blog')).sort(
+const posts = (await getCollection('blog')).filter(blog => !blog.data.draft).sort(
 	(a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
 );
 ---
@@ -21,7 +21,7 @@ const posts = (await getCollection('blog')).sort(
 				list-style-type: none;
 				padding: unset;
 				display: grid;
-				grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+				grid-template-columns: repeat(auto-fit, min(100%, 300px));
 				gap: 1em;
 			}
 			ul li a {
@@ -45,10 +45,13 @@ const posts = (await getCollection('blog')).sort(
 				grid-column: 1;
 				display: block;
 			}
-
-			ul li a img {
+			
+			 .picture {
 				grid-row: 1 / span 3;
 				grid-column: 1;
+			}
+
+			ul li a img {
 				border-radius: 8px;
 				object-fit: cover;
 				aspect-ratio: 9/16;
