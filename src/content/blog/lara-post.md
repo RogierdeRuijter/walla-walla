@@ -2,7 +2,7 @@
 title: "Existential Crisis"
 description: "Quarter Life Dissillusionment"
 pubDate: "April 08 2023"
-heroImage: "existential-crisis.jpeg"
+heroImage: "existential-crisis.jpg"
 width: 4032
 height: 3024
 ---
