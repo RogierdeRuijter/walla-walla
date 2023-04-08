@@ -2,7 +2,7 @@
 title: "Existential Crisis"
 description: "Quarter Life Dissillusionment"
 pubDate: "April 08 2023"
-heroImage: "corsa.jpg"
+heroImage: "existential-crisis.jpeg"
 width: 3024
 height: 4032
 ---
