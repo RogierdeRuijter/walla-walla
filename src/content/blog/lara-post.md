@@ -2,9 +2,9 @@
 title: "Existential Crisis"
 description: "Quarter Life Dissillusionment"
 pubDate: "April 08 2023"
-heroImage: "existential-crisis.jpg"
-width: 4032
-height: 3024
+heroImage: "terrible-people.jpeg"
+width: 3024
+height: 4032
 ---
 
 dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae ultricies leo integer malesuada nunc vel risus commodo viverra. Adipiscing enim eu turpis egestas pretium. Euismod elementum nisi quis eleifend quam adipiscing. In hac habitasse platea dictumst vestibulum. Sagittis purus sit amet volutpat. Netus et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus vestibulum lorem. Varius sit amet mattis vulputate enim. Habitasse platea dictumst quisque sagittis. Integer quis auctor elit sed vulputate mi. Dictumst quisque sagittis purus sit amet.
